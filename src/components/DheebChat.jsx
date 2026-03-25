@@ -45,14 +45,9 @@ export default function DheebChat({ onClose, chatPosition }) {
     setIsTyping(true)
 
     try {
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
+      const response = await fetch(import.meta.env.VITE_CHAT_API || 'https://dheeb-chat.hatim9aa.workers.dev', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-api-key': import.meta.env.VITE_ANTHROPIC_API_KEY,
-          'anthropic-version': '2023-06-01',
-          'anthropic-dangerous-direct-browser-access': 'true',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           model: 'claude-haiku-4-5-20251001',
           max_tokens: 150,
@@ -97,7 +92,7 @@ LinkedIn: linkedin.com/in/hatim-alshehri-cs
       }
 
       const data = await response.json()
-      const wolfReply = data.content?.[0]?.text || 'عذراً، صار شي غلط 🐺'
+      const wolfReply = data.content?.[0]?.text || 'صار شي غلط، جرب مرة ثانية'
 
       setMessages((prev) => [
         ...prev,
@@ -109,7 +104,7 @@ LinkedIn: linkedin.com/in/hatim-alshehri-cs
         ...prev,
         {
           role: 'assistant',
-          content: 'أووو! صار خطأ تقني.. جرب مرة ثانية 🐺',
+          content: 'صار خطأ تقني، جرب مرة ثانية',
         },
       ])
     } finally {
