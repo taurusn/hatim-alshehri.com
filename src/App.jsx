@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import Loader from './components/Loader'
 import CursorGlow from './components/CursorGlow'
 import Card, { Label, Pill } from './components/Card'
+import Dheeb from './components/Dheeb'
 
 /* ─── Shared animation helper for non-Card motion elements ─── */
 const fade = (d = 0) => ({
@@ -22,7 +23,7 @@ const allTechs = [
   { name: 'React', icon: 'react' },
   { name: 'Next.js', icon: 'nextdotjs' },
   { name: 'Vite', icon: 'vite' },
-  { name: 'Phaser', icon: 'phaserframework' },
+  { name: 'Phaser', icon: null },
   { name: 'vLLM', icon: null },
   { name: 'Llama', icon: 'meta' },
   { name: 'Gemini', icon: 'googlegemini' },
@@ -270,6 +271,7 @@ export default function App() {
 
             </div>
           </main>
+          <Dheeb />
         </motion.div>
       )}
     </>
