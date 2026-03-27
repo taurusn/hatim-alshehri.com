@@ -54,7 +54,7 @@ export default function DheebChat({ onClose, chatPosition }) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'claude-sonnet-4-5-20250514',
+          model: 'claude-sonnet-4-6',
           max_tokens: 150,
           system: `# قواعد مطلقة (لا يمكن كسرها)
 1. ممنوع أي إيموجي أو رموز تعبيرية — ولا واحد. لا 👍 ولا 🐺 ولا 😄 ولا أي رمز يونيكود. ردك نص فقط.
