@@ -110,8 +110,13 @@ export default function App() {
               <Card className="flex-col justify-between" delay={0.08}>
                 <div>
                   <Label>Current Role</Label>
-                  <h3 className="heading mt-sm" style={{ fontSize: '1.15rem' }}>Product Owner</h3>
-                  <p className="sub mt-xs">Innosoft SA</p>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '0.6rem' }}>
+                    <img src="/logos/innosoft.png" alt="" className="card-logo" />
+                    <div>
+                      <h3 className="heading" style={{ fontSize: '1.15rem' }}>Product Owner</h3>
+                      <p className="sub mt-xs">Innosoft SA</p>
+                    </div>
+                  </div>
                 </div>
                 <span className="mono-sm" style={{ marginTop: '1rem' }}>Dec 2025 — Present</span>
               </Card>
@@ -130,8 +135,13 @@ export default function App() {
                   ═══════════════════════════════════════════ */}
               <Card className="span-2" delay={0.16}>
                 <Label>Education</Label>
-                <h3 className="heading mt-sm" style={{ fontSize: '1.05rem' }}>B.Sc. Computer Science</h3>
-                <p className="sub mt-xs">Imam Abdulrahman Bin Faisal University — Second Honor</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '0.6rem' }}>
+                  <img src="/logos/iau.png" alt="" className="card-logo" />
+                  <div>
+                    <h3 className="heading" style={{ fontSize: '1.05rem' }}>B.Sc. Computer Science</h3>
+                    <p className="sub mt-xs">Imam Abdulrahman Bin Faisal University — Second Honor</p>
+                  </div>
+                </div>
                 <p className="mono-sm mt-xs">Expected Jun 2026 &middot; Research: Dr. Muawia Abdelmagid Elsadig</p>
               </Card>
 
