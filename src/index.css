@@ -494,8 +494,8 @@ body::after {
 
 /* ─── Card logos (role, education) ─── */
 .card-logo {
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   border-radius: 6px;
   object-fit: contain;
   opacity: 0.7;
