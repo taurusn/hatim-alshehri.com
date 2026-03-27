@@ -1,9 +1,15 @@
 export default {
   async fetch(request, env) {
     const origin = request.headers.get('Origin') || ''
-    const allowed = origin === env.ALLOWED_ORIGIN
-      || origin === 'http://localhost:5173'
-      || origin === 'http://localhost:5174'
+    const allowedOrigins = [
+      env.ALLOWED_ORIGIN,
+      'http://hatim-shehri.com',
+      'https://www.hatim-shehri.com',
+      'http://www.hatim-shehri.com',
+      'http://localhost:5173',
+      'http://localhost:5174',
+    ]
+    const allowed = allowedOrigins.includes(origin)
 
     const cors = {
       'Access-Control-Allow-Origin': allowed ? origin : '',
