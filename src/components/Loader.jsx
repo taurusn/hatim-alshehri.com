@@ -109,7 +109,7 @@ export default function Loader({ onComplete }) {
       <div ref={counterRef} style={styles.counter}>000</div>
 
       {/* Tagline */}
-      <div ref={taglineRef} style={styles.tagline}>Building systems that ship</div>
+      <div ref={taglineRef} style={styles.tagline}>Architect. Build. Ship.</div>
     </div>
   )
 }

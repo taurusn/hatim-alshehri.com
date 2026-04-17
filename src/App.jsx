@@ -143,7 +143,7 @@ export default function App() {
                   PROJECTS SECTION
                   ═══════════════════════════════════════════ */}
               <motion.div className="section-label" {...fade()}>
-                <Label>Projects</Label>
+                <Label>The work</Label>
               </motion.div>
 
               {/* Nurliya — compressed to span-2 */}
@@ -212,7 +212,7 @@ export default function App() {
                         SADN
                       </h3>
                     </div>
-                    <p className="sub mt-xs">Data Anonymization Platform — CS 511 Capstone</p>
+                    <p className="sub mt-xs">The research, shipped — CS 511 Capstone</p>
                     <p className="body-editorial mt-md">
                       A nine-service distributed system that anonymizes sensitive datasets at scale
                       per Saudi regulations (PDPL, SDAIA, NCA, NDMO, MOH). Five transformation
@@ -262,7 +262,7 @@ export default function App() {
                         Product Crew
                       </h3>
                     </div>
-                    <p className="sub mt-xs">How I ship — Claude Code agent template</p>
+                    <p className="sub mt-xs">The agent teams — six specialists that ship products like SADN</p>
                     <p className="body-sm mt-md">
                       Six specialized agent roles — Atlas leads, the rest own frontend, backend,
                       QA, design, and docs. They share context through a memory system, coordinate
@@ -340,6 +340,9 @@ export default function App() {
                     <p className="footer-meta">Dammam &middot; Saudi Arabia</p>
                   </div>
                   <div className="footer-col footer-end">
+                    <p className="footer-meta">
+                      Want to build something? <a href="mailto:hatimalshehri.official@outlook.sa" className="footer-link">hatimalshehri.official@outlook.sa</a>
+                    </p>
                     <p className="footer-meta">Built by hand &middot; React, GSAP, pure CSS</p>
                     <p className="footer-meta">No analytics &middot; No tracking &middot; No templates</p>
                   </div>

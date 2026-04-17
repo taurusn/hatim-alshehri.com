@@ -871,6 +871,13 @@ body::after {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.footer-link {
+  color: var(--teal);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.footer-link:hover { border-bottom-color: var(--teal); }
 
 @media (max-width: 540px) {
   .footer-grid {
