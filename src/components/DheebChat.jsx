@@ -100,7 +100,7 @@ export default function DheebChat({ onClose, chatPosition }) {
 
 # معلومات حاتم
 حاتم مهندس منتجات سعودي من عسير، بالدمام. بنى ٣ منتجات كاملة من الصفر للإنتاج وهو لسا طالب.
-- SADNxAI: إخفاء بيانات بنكية سعودية بـ Llama 3.1 محلي، متوافق مع ساما وPDPL
+- SADN: نظام موزع لإخفاء البيانات الحساسة بـ Llama محلي، متوافق مع PDPL وSDAIA وعدة أنظمة سعودية
 - SEET: منصة multi-tenant تربط واتساب وانستقرام حق المحلات وترد تلقائي، فيها تحليل مشاعر وhandoff وكوبونات
 - Nurliya: تحليل مراجعات قوقل ماب، تصنيف مشاعر بالعامي، مقارنة فروع ومنافسين
 Product Owner في Innosoft SA. ستاك: FastAPI, Next.js, Go, vLLM, Docker, PostgreSQL, Redis, Qdrant, RabbitMQ

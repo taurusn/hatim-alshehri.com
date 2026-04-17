@@ -27,6 +27,8 @@ const allTechs = [
   { name: 'vLLM', icon: null },
   { name: 'Llama', icon: 'meta' },
   { name: 'Gemini', icon: 'googlegemini' },
+  { name: 'LangGraph', icon: null },
+  { name: 'pgvector', icon: null },
   { name: 'Qdrant', icon: null },
   { name: 'spaCy', icon: 'spacy' },
   { name: 'scikit-learn', icon: 'scikitlearn' },
@@ -36,14 +38,13 @@ const allTechs = [
   { name: 'PostgreSQL', icon: 'postgresql' },
   { name: 'Redis', icon: 'redis' },
   { name: 'RabbitMQ', icon: 'rabbitmq' },
+  { name: 'MinIO', icon: null },
+  { name: 'Vault', icon: 'vault' },
+  { name: 'mTLS', icon: null },
   { name: 'Go', icon: 'go' },
   { name: 'Python', icon: 'python' },
   { name: 'TypeScript', icon: 'typescript' },
-]
-
-const nurliyaPills = [
-  'FastAPI', 'Next.js', 'Qdrant', 'RabbitMQ', 'Go',
-  'Gemini', 'Redis', 'MinIO', 'Cloudflare', 'HDBSCAN', 'MiniLM',
+  { name: 'C# / .NET', icon: 'dotnet' },
 ]
 
 export default function App() {
@@ -60,6 +61,9 @@ export default function App() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
+          {/* Scroll progress (CSS scroll-driven animation) */}
+          <div className="scroll-progress" />
+
           {/* Background depth layers */}
           <div className="bg-depth">
             <div className="orb orb-1" />
@@ -78,17 +82,17 @@ export default function App() {
                   HERO — span 2 cols, 2 rows
                   ═══════════════════════════════════════════ */}
               <Card
-                className="card-hero anim-border span-2r flex-col justify-between"
-                style={{ minHeight: 340 }}
+                className="card-hero span-4 flex-col"
                 delay={0}
               >
-                <div>
-                  <h1 className="hero-name">Hatim<br />Alshehri</h1>
-                  <p className="sub" style={{ marginTop: '1.2rem', maxWidth: 360, lineHeight: 1.6 }}>
-                    I design and ship production systems — from architecture and ML pipelines to frontend and infrastructure.
-                  </p>
-                </div>
+                <h1 className="hero-name">Hatim Alshehri</h1>
+                <p className="sub" style={{ marginTop: '1.2rem', maxWidth: 380, lineHeight: 1.6 }}>
+                  Saudi product engineer building distributed systems for regulated industries — and the agent teams that ship them faster.
+                </p>
                 <div className="btns mt-lg">
+                  <a href="mailto:hatimalshehri.official@outlook.sa" className="btn primary">
+                    Say Hello &rarr;
+                  </a>
                   <a href="https://github.com/taurusn" target="_blank" rel="noopener noreferrer" className="btn">
                     GitHub
                   </a>
@@ -98,51 +102,41 @@ export default function App() {
                   <a href="/Hatim_Alshehri_CV.pdf" target="_blank" rel="noopener noreferrer" className="btn">
                     Resume
                   </a>
-                  <a href="mailto:hatimalshehri.official@outlook.sa" className="btn primary">
-                    Say Hello &rarr;
-                  </a>
                 </div>
               </Card>
 
               {/* ═══════════════════════════════════════════
-                  ROLE
+                  CURRENTLY — Role + Background combined (span-2)
                   ═══════════════════════════════════════════ */}
-              <Card className="flex-col justify-between" delay={0.08}>
+              <Card className="span-2 flex-col justify-between" delay={0.08}>
                 <div>
-                  <Label>Current Role</Label>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '0.6rem' }}>
+                  <Label>Currently</Label>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '0.7rem' }}>
                     <img src="/logos/innosoft.png" alt="" className="card-logo" />
                     <div>
                       <h3 className="heading" style={{ fontSize: '1.15rem' }}>Product Owner</h3>
-                      <p className="sub mt-xs">Innosoft SA</p>
+                      <p className="sub mt-xs">Innosoft SA &middot; Dec 2025 — Present</p>
                     </div>
                   </div>
                 </div>
-                <span className="mono-sm" style={{ marginTop: '1rem' }}>Dec 2025 — Present</span>
+                <p className="mono-sm" style={{ marginTop: '1.2rem', letterSpacing: '0.1em' }}>
+                  ASIR-BORN &middot; DAMMAM-BASED &middot; AR + EN
+                </p>
               </Card>
 
               {/* ═══════════════════════════════════════════
-                  LOCATION
-                  ═══════════════════════════════════════════ */}
-              <Card className="flex-col" delay={0.12}>
-                <Label>Based In</Label>
-                <h3 className="heading mt-sm" style={{ fontSize: '1.15rem' }}>Dammam</h3>
-                <p className="sub mt-xs">Saudi Arabia</p>
-              </Card>
-
-              {/* ═══════════════════════════════════════════
-                  EDUCATION
+                  RESEARCH (was Education)
                   ═══════════════════════════════════════════ */}
               <Card className="span-2" delay={0.16}>
-                <Label>Education</Label>
+                <Label>Research</Label>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '0.6rem' }}>
                   <img src="/logos/iau.png" alt="" className="card-logo" />
                   <div>
-                    <h3 className="heading" style={{ fontSize: '1.05rem' }}>B.Sc. Computer Science</h3>
-                    <p className="sub mt-xs">Imam Abdulrahman Bin Faisal University — Second Honor</p>
+                    <h3 className="heading" style={{ fontSize: '1.05rem' }}>Privacy-Preserving Data Anonymization</h3>
+                    <p className="sub mt-xs">Under Dr. Muawia Abdelmagid Elsadig &middot; IAU</p>
                   </div>
                 </div>
-                <p className="mono-sm mt-xs">Expected Jun 2026 &middot; Research: Dr. Muawia Abdelmagid Elsadig</p>
+                <p className="mono-sm mt-xs">B.Sc. Computer Science &middot; Second Honor &middot; Expected Jun 2026</p>
               </Card>
 
               {/* ═══════════════════════════════════════════
@@ -152,26 +146,26 @@ export default function App() {
                 <Label>Projects</Label>
               </motion.div>
 
-              {/* SADNxAI */}
-              <Card className="span-2 anim-border" glow="teal" delay={0}>
-                <div className="flex-between" style={{ marginBottom: '0.8rem' }}>
-                  <span className="num num-teal">01</span>
-                  <a href="https://github.com/taurusn/SADNxAI" target="_blank" rel="noopener noreferrer" className="arrow-link">
+              {/* Nurliya — compressed to span-2 */}
+              <Card className="span-2" glow="teal" delay={0}>
+                <div className="flex-between" style={{ marginBottom: '1.1rem', alignItems: 'flex-start' }}>
+                  <span className="num-display num-teal">01</span>
+                  <a href="https://github.com/taurusn/Nurliya" target="_blank" rel="noopener noreferrer" className="arrow-link" style={{ marginTop: '0.5rem' }}>
                     &#8599; Source
                   </a>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <img src="/logos/sadnxai.png" alt="" className="proj-logo" />
-                  <h3 className="heading" style={{ fontSize: '1.3rem' }}>SADNxAI</h3>
+                  <span className="proj-logo-text">ن</span>
+                  <h3 className="heading" style={{ fontSize: '1.3rem' }}>Nurliya</h3>
                 </div>
-                <p className="sub mt-xs">Data Anonymization Platform</p>
+                <p className="sub mt-xs">Review Intelligence Platform</p>
                 <p className="body-sm mt-md">
-                  Walks users through anonymizing Saudi banking datasets via conversational interface.
-                  A local LLM classifies columns, recommends masking strategies, validates privacy metrics,
-                  and generates compliance reports — all aligned with PDPL and SAMA regulations.
+                  Give it a Google Maps link and it scrapes every review, discovers what
+                  customers talk about, classifies sentiment in Arabic dialect, and surfaces
+                  what's going wrong — across all branches, against competitors.
                 </p>
                 <div className="pills mt-md">
-                  {['FastAPI', 'Next.js', 'vLLM', 'Llama 3.1', 'PostgreSQL', 'Redis', 'WebSocket'].map(t => (
+                  {['FastAPI', 'Next.js', 'Qdrant', 'Gemini', 'Go', 'HDBSCAN', 'MiniLM'].map(t => (
                     <Pill key={t}>{t}</Pill>
                   ))}
                 </div>
@@ -179,14 +173,14 @@ export default function App() {
 
               {/* SEET */}
               <Card className="span-2" glow="emerald" delay={0.06}>
-                <div className="flex-between" style={{ marginBottom: '0.8rem' }}>
-                  <span className="num num-emerald">02</span>
-                  <a href="https://github.com/taurusn/SEET" target="_blank" rel="noopener noreferrer" className="arrow-link">
+                <div className="flex-between" style={{ marginBottom: '1.1rem', alignItems: 'flex-start' }}>
+                  <span className="num-display num-emerald">02</span>
+                  <a href="https://github.com/taurusn/SEET" target="_blank" rel="noopener noreferrer" className="arrow-link" style={{ marginTop: '0.5rem' }}>
                     &#8599; Source
                   </a>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <img src="/logos/seet.png" alt="" className="proj-logo" />
+                  <img src="/logos/seet.svg" alt="" className="proj-logo" />
                   <h3 className="heading" style={{ fontSize: '1.3rem' }}>SEET</h3>
                 </div>
                 <p className="sub mt-xs">Multi-Tenant Messaging Platform</p>
@@ -202,48 +196,111 @@ export default function App() {
                 </div>
               </Card>
 
-              {/* Nurliya — full width */}
-              <Card className="span-4" glow="rose" delay={0.08}>
+              {/* SADN — promoted to full-width hero */}
+              <Card className="span-4" glow="teal" delay={0.08}>
                 <div className="proj-split">
                   <div>
-                    <div className="flex-between" style={{ marginBottom: '0.8rem' }}>
-                      <span className="num num-rose">03</span>
-                      <a href="https://github.com/taurusn/Nurliya" target="_blank" rel="noopener noreferrer" className="arrow-link">
+                    <div className="flex-between" style={{ marginBottom: '1.1rem', alignItems: 'flex-start' }}>
+                      <span className="num-display num-teal">03</span>
+                      <a href="https://github.com/taurusn/SADNxAI" target="_blank" rel="noopener noreferrer" className="arrow-link" style={{ marginTop: '0.5rem' }}>
                         &#8599; Source
                       </a>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <span className="proj-logo-text">ن</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                      <img src="/logos/sadnxai.png" alt="" className="proj-logo" />
                       <h3 className="heading" style={{ fontSize: '1.3rem' }}>
-                        Nurliya
+                        SADN
                       </h3>
                     </div>
-                    <p className="sub mt-xs">Review Intelligence Platform</p>
-                    <p className="body-sm mt-md">
-                      Give it a Google Maps link and it scrapes every review, discovers
-                      what customers talk about, classifies sentiment in Arabic dialect, and
-                      surfaces what's going wrong — across all branches, against competitors.
+                    <p className="sub mt-xs">Data Anonymization Platform — CS 511 Capstone</p>
+                    <p className="body-editorial mt-md">
+                      A nine-service distributed system that anonymizes sensitive datasets at scale
+                      per Saudi regulations (PDPL, SDAIA, NCA, NDMO, MOH). Five transformation
+                      modules — generalization, pseudonymization, date shifting, suppression, NER
+                      redaction — coordinated through an event-driven RabbitMQ pipeline with k/l/t
+                      privacy metric verification. An agentic layer runs <strong>local LLMs</strong>
+                      to arbitrate ambiguous classifications and cite a specific regulation for every
+                      decision. Cross-institutional sharing happens under enforced Data Use Agreements
+                      via mTLS federation.
                     </p>
                   </div>
                   <div>
                     <div className="pills">
-                      {nurliyaPills.map(t => (
+                      {['C# / .NET 8', 'FastAPI', 'RabbitMQ', 'PostgreSQL', 'MinIO', 'Vault', 'LangGraph', 'pgvector', 'Llama 3.3', 'mTLS', 'Docker'].map(t => (
                         <Pill key={t}>{t}</Pill>
                       ))}
                     </div>
                     <div className="stats-grid">
                       <div>
-                        <div className="stat-val" style={{ color: 'var(--rose)' }}>120+</div>
-                        <div className="stat-label">places/min scraped</div>
+                        <div className="stat-val" style={{ color: 'var(--teal)' }}>9</div>
+                        <div className="stat-label">microservices shipped</div>
                       </div>
                       <div>
-                        <div className="stat-val" style={{ color: 'var(--rose)' }}>12</div>
-                        <div className="stat-label">microservices</div>
+                        <div className="stat-val" style={{ color: 'var(--teal)' }}>5</div>
+                        <div className="stat-label">transformation modules</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </Card>
+
+              {/* ═══════════════════════════════════════════
+                  PRODUCT CREW — meta-tool, full width
+                  ═══════════════════════════════════════════ */}
+              <Card className="span-4" delay={0.1}>
+                <div className="proj-split">
+                  <div>
+                    <div className="flex-between" style={{ marginBottom: '1.1rem', alignItems: 'flex-start' }}>
+                      <span className="num-display num-teal">04</span>
+                      <span className="arrow-link" style={{ cursor: 'default', opacity: 0.7, marginTop: '0.5rem' }}>
+                        Deployed in SADN &uarr;
+                      </span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                      <img src="/logos/sonar.svg" alt="" className="proj-logo" />
+                      <h3 className="heading" style={{ fontSize: '1.3rem' }}>
+                        Product Crew
+                      </h3>
+                    </div>
+                    <p className="sub mt-xs">How I ship — Claude Code agent template</p>
+                    <p className="body-sm mt-md">
+                      Six specialized agent roles — Atlas leads, the rest own frontend, backend,
+                      QA, design, and docs. They share context through a memory system, coordinate
+                      through a protocol I wrote, and surface progress in <strong>Sonar</strong>,
+                      a real-time mission control dashboard. The template I cloned into SADN to
+                      ship it faster.
+                    </p>
+                  </div>
+                  <div>
+                    <div className="pills">
+                      {['Atlas', 'Pixel', 'Core', 'Break', 'Eye', 'Ink', 'Sonar Dashboard', 'Memory System', 'Cost Tracking'].map(t => (
+                        <Pill key={t}>{t}</Pill>
+                      ))}
+                    </div>
+                    <div className="stats-grid">
+                      <div>
+                        <div className="stat-val" style={{ color: 'var(--teal)' }}>6</div>
+                        <div className="stat-label">specialized roles</div>
+                      </div>
+                      <div>
+                        <div className="stat-val" style={{ color: 'var(--teal)' }}>1</div>
+                        <div className="stat-label">in production · SADN</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* ═══════════════════════════════════════════
+                  THROUGHLINE — editorial interlude
+                  ═══════════════════════════════════════════ */}
+              <motion.div className="span-4 throughline" {...fade()}>
+                <span className="throughline-mark">//</span>
+                <p>
+                  I tend to build for places where data sovereignty, Arabic dialect, and Saudi
+                  regulation are the constraints — not the asterisks.
+                </p>
+              </motion.div>
 
               {/* ═══════════════════════════════════════════
                   STACK — Infinite scrolling marquee
@@ -276,7 +333,17 @@ export default function App() {
                   FOOTER
                   ═══════════════════════════════════════════ */}
               <motion.div className="footer" {...fade()}>
-                <p>hatim-alshehri.com</p>
+                <div className="footer-rule" />
+                <div className="footer-grid">
+                  <div className="footer-col">
+                    <p className="footer-mark">hatim-shehri.com</p>
+                    <p className="footer-meta">Dammam &middot; Saudi Arabia</p>
+                  </div>
+                  <div className="footer-col footer-end">
+                    <p className="footer-meta">Built by hand &middot; React, GSAP, pure CSS</p>
+                    <p className="footer-meta">No analytics &middot; No tracking &middot; No templates</p>
+                  </div>
+                </div>
               </motion.div>
 
             </div>

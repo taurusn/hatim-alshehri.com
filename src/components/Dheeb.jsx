@@ -728,15 +728,21 @@ export default function Dheeb() {
       if (plats.length > 0) {
         const first = plats[0]
         xRef.current = (first.left + first.right) / 2
-        yRef.current = first.top - WOLF_H
-        onPlatformRef.current = first
-        transitionTo(STATES.IDLE)
+        yRef.current = first.top - WOLF_H - 220 // start above the card
+        vyRef.current = 0
+        onPlatformRef.current = null
+        transitionTo(STATES.FALL) // gravity will drop him onto the first card
       } else {
         xRef.current = window.innerWidth / 2
         yRef.current = 0
         vyRef.current = 0
         transitionTo(STATES.FALL)
       }
+
+      // Fade in once positioned (next frame, so the position is applied first)
+      requestAnimationFrame(() => {
+        if (wolfRef.current) wolfRef.current.style.opacity = '1'
+      })
 
       rafRef.current = requestAnimationFrame(tick)
     }, 1500)
