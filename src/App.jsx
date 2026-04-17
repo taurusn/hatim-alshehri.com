@@ -207,7 +207,7 @@ export default function App() {
                       </a>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                      <img src="/logos/sadnxai.png" alt="" className="proj-logo" />
+                      <img src="/logos/sadnxai.svg" alt="" className="proj-logo" />
                       <h3 className="heading" style={{ fontSize: '1.3rem' }}>
                         SADN
                       </h3>
