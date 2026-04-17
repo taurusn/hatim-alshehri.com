@@ -87,7 +87,7 @@ export default function App() {
               >
                 <h1 className="hero-name">Hatim Alshehri</h1>
                 <p className="sub" style={{ marginTop: '1.2rem', maxWidth: 380, lineHeight: 1.6 }}>
-                  Saudi product engineer building distributed systems for regulated industries — and the agent teams that ship them faster.
+                  Saudi product engineer building distributed systems for regulated industries, and the agent teams that ship them faster.
                 </p>
                 <div className="btns mt-lg">
                   <a href="mailto:hatimalshehri.official@outlook.sa" className="btn primary">
@@ -115,7 +115,7 @@ export default function App() {
                     <img src="/logos/innosoft.png" alt="" className="card-logo" />
                     <div>
                       <h3 className="heading" style={{ fontSize: '1.15rem' }}>Product Owner</h3>
-                      <p className="sub mt-xs">Innosoft SA &middot; Dec 2025 — Present</p>
+                      <p className="sub mt-xs">Innosoft SA &middot; Dec 2025 &ndash; Present</p>
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ export default function App() {
                 <p className="body-sm mt-md">
                   Give it a Google Maps link and it scrapes every review, discovers what
                   customers talk about, classifies sentiment in Arabic dialect, and surfaces
-                  what's going wrong — across all branches, against competitors.
+                  what's going wrong across all branches, against competitors.
                 </p>
                 <div className="pills mt-md">
                   {['FastAPI', 'Next.js', 'Qdrant', 'Gemini', 'Go', 'HDBSCAN', 'MiniLM'].map(t => (
@@ -186,7 +186,7 @@ export default function App() {
                 <p className="sub mt-xs">Multi-Tenant Messaging Platform</p>
                 <p className="body-sm mt-md">
                   Onboard a coffee shop, connect their socials, and the platform handles customer
-                  conversations 24/7 — in Najdi dialect. Includes sentiment tracking, automatic
+                  conversations 24/7 in Najdi dialect. Includes sentiment tracking, automatic
                   handoff to humans when needed, digital vouchers, and white-label branding per tenant.
                 </p>
                 <div className="pills mt-md">
@@ -212,12 +212,12 @@ export default function App() {
                         SADN
                       </h3>
                     </div>
-                    <p className="sub mt-xs">The research, shipped — CS 511 Capstone</p>
+                    <p className="sub mt-xs">The research, shipped. CS 511 Capstone.</p>
                     <p className="body-editorial mt-md">
                       A nine-service distributed system that anonymizes sensitive datasets at scale
                       per Saudi regulations (PDPL, SDAIA, NCA, NDMO, MOH). Five transformation
-                      modules — generalization, pseudonymization, date shifting, suppression, NER
-                      redaction — coordinated through an event-driven RabbitMQ pipeline with k/l/t
+                      modules (generalization, pseudonymization, date shifting, suppression, NER
+                      redaction) coordinated through an event-driven RabbitMQ pipeline with k/l/t
                       privacy metric verification. An agentic layer runs <strong>local LLMs</strong>
                       to arbitrate ambiguous classifications and cite a specific regulation for every
                       decision. Cross-institutional sharing happens under enforced Data Use Agreements
@@ -262,9 +262,9 @@ export default function App() {
                         Product Crew
                       </h3>
                     </div>
-                    <p className="sub mt-xs">The agent teams — six specialists that ship products like SADN</p>
+                    <p className="sub mt-xs">The agent teams. Six specialists that ship products like SADN.</p>
                     <p className="body-sm mt-md">
-                      Six specialized agent roles — Atlas leads, the rest own frontend, backend,
+                      Six specialized agent roles. Atlas leads, the rest own frontend, backend,
                       QA, design, and docs. They share context through a memory system, coordinate
                       through a protocol I wrote, and surface progress in <strong>Sonar</strong>,
                       a real-time mission control dashboard. The template I cloned into SADN to
@@ -298,7 +298,7 @@ export default function App() {
                 <span className="throughline-mark">//</span>
                 <p>
                   I tend to build for places where data sovereignty, Arabic dialect, and Saudi
-                  regulation are the constraints — not the asterisks.
+                  regulation are the constraints, not the asterisks.
                 </p>
               </motion.div>
 
