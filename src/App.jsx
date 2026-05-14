@@ -202,9 +202,14 @@ export default function App() {
                   <div>
                     <div className="flex-between" style={{ marginBottom: '1.1rem', alignItems: 'flex-start' }}>
                       <span className="num-display num-teal">03</span>
-                      <a href="https://github.com/taurusn/SADNxAI" target="_blank" rel="noopener noreferrer" className="arrow-link" style={{ marginTop: '0.5rem' }}>
-                        &#8599; Source
-                      </a>
+                      <div style={{ display: 'flex', gap: '0.85rem', marginTop: '0.5rem' }}>
+                        <a href="https://sadn.site" target="_blank" rel="noopener noreferrer" className="arrow-link">
+                          &#8599; Visit
+                        </a>
+                        <a href="https://paper.sadn.site" target="_blank" rel="noopener noreferrer" className="arrow-link">
+                          &#8599; Paper
+                        </a>
+                      </div>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                       <img src="/logos/sadnxai.svg" alt="" className="proj-logo" />
@@ -217,16 +222,19 @@ export default function App() {
                       A nine-service distributed system that anonymizes sensitive datasets at scale
                       per Saudi regulations (PDPL, SDAIA, NCA, NDMO, MOH). Five transformation
                       modules (generalization, pseudonymization, date shifting, suppression, NER
-                      redaction) coordinated through an event-driven RabbitMQ pipeline with k/l/t
-                      privacy metric verification. An agentic layer runs <strong>local LLMs</strong>
-                      to arbitrate ambiguous classifications and cite a specific regulation for every
-                      decision. Cross-institutional sharing happens under enforced Data Use Agreements
-                      via mTLS federation.
+                      redaction) coordinated through an event-driven RabbitMQ pipeline. An
+                      agentic classifier and validator (a Counsel agent on hybrid pgvector + BM25
+                      retrieval across Saudi regulator PDFs) labels each column's privacy class,
+                      then verifies the masked output against k / l / t thresholds, with
+                      deterministic rules holding veto so every verdict cites a specific article.
+                      <strong>LLM-agnostic</strong>, targeting local on-prem inference for PDPL
+                      sovereignty. Cross-institutional sharing happens under enforced Data Use
+                      Agreements via mTLS federation.
                     </p>
                   </div>
                   <div>
                     <div className="pills">
-                      {['C# / .NET 8', 'FastAPI', 'RabbitMQ', 'PostgreSQL', 'MinIO', 'Vault', 'LangGraph', 'pgvector', 'Llama 3.3', 'mTLS', 'Docker'].map(t => (
+                      {['C# / .NET 8', 'FastAPI', 'RabbitMQ', 'PostgreSQL', 'MinIO', 'Vault', 'pgvector', 'BM25', 'mTLS', 'Docker'].map(t => (
                         <Pill key={t}>{t}</Pill>
                       ))}
                     </div>
